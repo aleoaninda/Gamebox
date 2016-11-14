@@ -1,8 +1,3 @@
-<!--
-Gamebox.com alpha Ver 1.2
-for the final project of CSE 391
-by Aleo Aninda (ID: 13301113)
--->
 <?php
     session_start();
 ?>
