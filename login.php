@@ -18,10 +18,7 @@ by Aleo Aninda (ID: 13301113)
     <body>
       <?php
         $signinsucess=true;
-        $database = new mysqli("localhost","root","ark112angel","gamebox_db"); 
-        if($database->connect_errno){
-          echo "Failed to connect to MySQL: (" . $database->connect_errno . ") ";
-        }
+        include 'database_auth.php';
 
         if(isset($_POST["signinsubmit"])){
           if($_POST["username"]=="admin"){
