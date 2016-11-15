@@ -17,10 +17,7 @@ by Aleo Aninda (ID: 13301113)
     </head>
     <body>
       <?php
-        $database = new mysqli("localhost","root","ark112angel","gamebox_db"); 
-        if($database->connect_errno){
-          echo "Failed to connect to MySQL: (" . $database->connect_errno . ") ";
-        }
+        include 'database_auth.php';
 
         if(isset($_POST["contsubmit"])){
           $sql="INSERT INTO `contact` (`c_name`, `c_email`, `c_phone`, `message`) VALUES ('$_POST[c_name]', '$_POST[c_email]', '$_POST[c_phone]', '$_POST[Message]')";
