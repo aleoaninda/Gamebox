@@ -44,10 +44,7 @@ by Aleo Aninda (ID: 13301113)
             </div>
         </div>
         <?php
-            $database = new mysqli("localhost","root","ark112angel","gamebox_db"); 
-            if($database->connect_errno){
-                echo "Failed to connect to MySQL: (" . $database->connect_errno . ") " . $database->connect_error;
-            }
+            include 'database_auth.php';
             if(!(isset($_GET['group_id']))){
                 $sql = "SELECT * FROM catagory";
                 $result = $database->query($sql);
