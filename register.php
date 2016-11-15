@@ -14,10 +14,7 @@ by Aleo Aninda (ID: 13301113)
     </head>
     <body>
       <?php
-        $database = new mysqli("localhost","root","ark112angel","gamebox_db"); 
-        if($database->connect_errno){
-          echo "Failed to connect to MySQL: (" . $database->connect_errno . ") ";
-        }
+        include 'database_auth.php';
 
         if(isset($_POST["registersubmit"])){
           $password=md5($_POST["password"]);
