@@ -51,10 +51,7 @@ by Aleo Aninda (ID: 13301113)
                 <!--Form for registration-->
                 <form action="myaccount.php" method="POST" id="registrationform">
                   <?php
-                    $database = new mysqli("localhost","root","ark112angel","gamebox_db"); 
-                    if($database->connect_errno){
-                    echo "Failed to connect to MySQL: (" . $database->connect_errno . ") ";
-                    }
+                    include 'database_auth.php';
                     $c_id=$_SESSION["CUSTOMER_ID"];
                     if(isset($_POST["accountsubmit"]) && isset($_POST["old_c_password"]) && isset($_POST["new_c_password"])){
                       $old_password = $_POST["old_c_password"];
