@@ -40,10 +40,7 @@
             </div>
         </div>
         <?php
-            $database = new mysqli("localhost","root","ark112angel","gamebox_db"); 
-            if($database->connect_errno){
-                echo "Failed to connect to MySQL: (" . $database->connect_errno . ") " . $database->connect_error;
-            }
+            include 'database_auth.php';
             $sql = "SELECT p_name, p_id, price, p_img FROM product;";
             $result = $database->query($sql);
             $i;
